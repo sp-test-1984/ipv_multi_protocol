@@ -1,13 +1,33 @@
 package stackpath.step_definitions;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import stackpath.util.TestConf;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class IPVStepDefinitions {
 
+    private static TestConf TEST_CONF = TestConf.getTestConf();
+    private static boolean isAccessible = false;
+    private Logger LOGGER = LoggerFactory.getLogger(IPVStepDefinitions.class);
+
+    @Before
+    public void setUp(){
+        try {
+            Desktop.getDesktop().open(new File(TEST_CONF.getApplicationPath()));
+            isAccessible = true;
+        } catch (IOException e){
+            LOGGER.error("The file: /Applications/IPVanish VPN.app doesn't exist.");
+        }
+    }
 
     @Given("^IPVanish is accessible$")
     public void ipvanish_is_accessible() throws Throwable {
