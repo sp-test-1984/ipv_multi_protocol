@@ -7,6 +7,7 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 
+import org.sikuli.script.Screen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,8 @@ public class TestConf {
     private static ObjectMapper MAPPER = buildObjectMapper();
     private static Validator VALIDATOR = Validation.buildDefaultValidatorFactory().getValidator();
     private static TestConf TEST_CONF = buildSingleton(BASE_CONFIG);
+    private static Screen SCREEN = buildScreen();
+
 
     @Valid
     @NotNull
@@ -32,6 +35,10 @@ public class TestConf {
     }
     public String getApplicationPath() {
         return applicationPath;
+    }
+
+    public static Screen getSCREEN() {
+        return SCREEN;
     }
 
     public static void displayConfig() {
@@ -46,6 +53,11 @@ public class TestConf {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return mapper;
+    }
+
+    private static Screen buildScreen() {
+        Screen screen = new Screen();
+        return screen;
     }
 
     private static TestConf buildSingleton(Config config){

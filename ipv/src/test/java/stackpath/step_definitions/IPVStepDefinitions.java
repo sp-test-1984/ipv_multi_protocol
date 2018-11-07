@@ -5,8 +5,10 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import stackpath.util.Images;
 import stackpath.util.TestConf;
 
 import java.awt.*;
@@ -31,7 +33,7 @@ public class IPVStepDefinitions {
 
     @Given("^IPVanish is accessible$")
     public void ipvanish_is_accessible() throws Throwable {
-        System.out.println(TestConf.getTestConf().getApplicationPath());
+        Assert.assertTrue("ipvanish not accessible", isAccessible);
     }
 
     @Given("^I am logged$")
