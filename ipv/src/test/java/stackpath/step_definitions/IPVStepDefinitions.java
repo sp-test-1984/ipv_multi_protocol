@@ -8,7 +8,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import stackpath.util.Images;
+import stackpath.pages.LoginPage;
 import stackpath.util.TestConf;
 
 import java.awt.*;
@@ -38,8 +38,7 @@ public class IPVStepDefinitions {
 
     @Given("^I am logged$")
     public void i_am_logged() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        LoginPage.login();
     }
 
     @When("^I select \"([^\"]*)\"$")

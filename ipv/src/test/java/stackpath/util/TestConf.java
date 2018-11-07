@@ -30,11 +30,28 @@ public class TestConf {
     @NotNull
     private String applicationPath;
 
+    @Valid
+    @NotNull
+    private String userName;
+
+    @Valid
+    @NotNull
+    private String password;
+
     public static TestConf getTestConf(){
         return TEST_CONF;
     }
     public String getApplicationPath() {
         return applicationPath;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    @NotNull
+    public String getPassword() {
+        return password;
     }
 
     public static Screen getSCREEN() {

@@ -63,7 +63,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2262286284,
+  "duration": 2218268303,
   "status": "passed"
 });
 formatter.scenario({
@@ -103,14 +103,14 @@ formatter.match({
   "location": "IPVStepDefinitions.ipvanish_is_accessible()"
 });
 formatter.result({
-  "duration": 87151668,
+  "duration": 89268843,
   "status": "passed"
 });
 formatter.match({
   "location": "IPVStepDefinitions.i_am_logged()"
 });
 formatter.result({
-  "duration": 1334652894,
+  "duration": 4628335810,
   "status": "passed"
 });
 formatter.match({
@@ -123,7 +123,7 @@ formatter.match({
   "location": "IPVStepDefinitions.i_select(String)"
 });
 formatter.result({
-  "duration": 6151141,
+  "duration": 3526412,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat stackpath.step_definitions.IPVStepDefinitions.i_select(IPVStepDefinitions.java:47)\n\tat ✽.When I select \"\u003cvpn_protocol\u003e\"(quick_connect/quick_connect.feature:5)\n",
   "status": "pending"
 });
