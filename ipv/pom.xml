@@ -11,6 +11,7 @@
   <properties>
     <junit.version>4.11</junit.version>
     <cukes.version>1.2.4</cukes.version>
+    <typesafe.version>1.0.2</typesafe.version>
   </properties>
 
   <dependencies>
@@ -29,6 +30,11 @@
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-junit</artifactId>
       <version>${cukes.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.typesafe</groupId>
+      <artifactId>config</artifactId>
+      <version>1.0.2</version>
     </dependency>
   </dependencies>
 
