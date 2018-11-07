@@ -11,8 +11,7 @@ public class IPVStepDefinitions {
 
     @Given("^IPVanish is accessible$")
     public void ipvanish_is_accessible() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        System.out.println(TestConf.getTestConf().getApplicationPath());
     }
 
     @Given("^I am logged$")
